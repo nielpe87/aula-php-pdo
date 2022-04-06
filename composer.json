@@ -1,0 +1,17 @@
+{
+    "name": "emanuelaguiar/aula-php-pdo",
+    "description": "Exemplo de CRUD com PDO",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Emanuel Aguiar",
+            "email": "emanuel_pe@live.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
