@@ -16,7 +16,10 @@ class Connect{
 
             if(! self::$pdo){
 
-                self::$pdo = new PDO('mysql:host=127.0.0.1;dbname=aula_pdo', 'root', '');
+                $dotenv = \Dotenv\Dotenv::createImmutable($_SERVER['DOCUMENT_ROOT']);
+                $dotenv->safeLoad();
+ 
+                self::$pdo = new PDO('mysql:host='. $_ENV['DB_HOST'] . ';dbname='. $_ENV['DB_NAME'], $_ENV['DB_USER'],  $_ENV['DB_PASSWORD']);
             }
 
             return self::$pdo;

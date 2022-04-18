@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="insert.php" method="POST">
-        
+    <form action="usercontroller.php" method="POST">
+        <input type="text" hidden name="action" value="insert">
         <label for="">Nome</label><br>
         <input type="text" name="name" value=""><br>
         <br>

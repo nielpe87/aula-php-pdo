@@ -2,7 +2,7 @@
 
 use App\Classes\User;
 
-require_once "vendor/autoload.php";
+require_once "../vendor/autoload.php";
 
 
 $id = $_GET['id'] ?? null;
@@ -24,7 +24,8 @@ if($id){
     <title>Document</title>
 </head>
 <body>
-    <form action="update.php" method="POST">
+    <form action="usercontroller.php" method="POST">
+        <input type="text" hidden name="action"  value="update">
         <input type="hidden" name="id" value="<?php echo $user->id?>">
         <label for="">Nome</label><br>
         <input type="text" name="name" value="<?php echo $user->name ?>"><br>
